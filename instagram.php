@@ -25,7 +25,7 @@
 
 <?php
 //513373382
-$api = file_get_contents("https://api.instagram.com/v1/users/{user_id}/media/recent/?client_id=7cbaa02501ea47cd928a426d022c4b72#");
+$api = file_get_contents("https://api.instagram.com/v1/users/{user_id}/media/recent/?client_id={client_id}");
 $json = json_decode($api,true);
 
 foreach($json['data'] as $data){
